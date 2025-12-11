@@ -1,7 +1,8 @@
-% Generate a time course of cue and reward through simple Pavlovian task
-% simulation
+
 
 function [time,cue,reward] = task_generate(nTrials,rewardProb,rewardMag, cueRewardDelay, ITI,dt)
+    % Generate a time course of cue and reward through simple Pavlovian task simulation
+    % 
     % Input:
     % nTrials = number of Trials
     % rewardProb = the probability that a reward will come after the cue
