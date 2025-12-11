@@ -21,6 +21,7 @@ function [V_history, w_history, E_history, T_history] = RPE_layer(time, cue, rew
     eta = params.eta;        % Learning rate
     sigma = params.sigma;    % Noise amplitude
     tau_T = params.tau_T;    % Tonic integration time constant
+    tau_V = params.tau_V;    % RPE unit taus
     
     numSteps = length(time);
     
@@ -49,11 +50,12 @@ function [V_history, w_history, E_history, T_history] = RPE_layer(time, cue, rew
         I_T = sum(V); % (sum over all RPE units)
         dTdt = (-T + I_T) / tau_T;
         T = T + dTdt * dt;
+        T = max(0,T);
        
         % update RPE units
         leak_term = (k0 + (kT * T)) .* V;
         current_noise = sigma * sqrt(dt) * randn(numUnits, 1);
-        dVdt = (I_t - leak_term) * dt + current_noise;
+        dVdt = ((I_t - leak_term) * dt + current_noise)/tau_V;
         V = V + dVdt;
         
         % dw/dt = eta (learning rate) * V_i * cue

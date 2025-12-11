@@ -25,15 +25,13 @@ for u = 1:numUnits
 end
 
 
-
-
 % Define Parameters
 params.dt = dt;
 params.k0 = 1.0;     % Baseline leak
 params.kT = 0.1;     % Feedback gain 
 params.eta = 0.1;    % Learning rate
 params.sigma = 0.5;  % Noise
-
+params.tau_V = 0.1;
 params.tau_T = 40.0; 
 
 fprintf('Running main simulation (kT = %.1f)...\n', params.kT);
@@ -43,7 +41,7 @@ fprintf('Running main simulation (kT = %.1f)...\n', params.kT);
 kT_sweep_values = 0 : 1 : 10; 
 avg_amplitudes = zeros(size(kT_sweep_values));
 
-fprintf('Starting parameter sweep for %d values (this may take a moment)...\n', length(kT_sweep_values));
+fprintf('Starting parameter sweep for %d values\n', length(kT_sweep_values));
 
 for i = 1:length(kT_sweep_values)
     % Create a temporary params struct for this iteration
