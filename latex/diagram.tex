@@ -9,6 +9,7 @@
 
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{float}
 
 \lstset{
   basicstyle=\ttfamily\small,
@@ -37,12 +38,63 @@
 \end{center}
 
 \vspace{1em}
+
+\noindent \textbf{Project Aims}\\
+For my final project, I was attempting to build a transparent one-parameter model of dysthymia (PDD or persistent depressive disorder) by modeling tonic/phasic dopamine dynamics. I've largely implemented what I presented in my final project proposal, albeit with much more detail and some modifications. 95\% of this project really is accurately capturing the tonic and phasic (Grace) model of dopamine. The tonic gain parameter is quite a small part in it, actually. 
+\\
+
+\noindent \textbf{Why this project interests me}\\
+"Abnormal psychology" (as the official Oberlin course calls it) is what prompted me to be interested in the cognitive sciences initially. That's why I was initially a Psychology major. However, as I progressed in the CS curriculum and took NSCI201,  I realized I wanted to study things much more mechanistic and lower-level. \\
+
+\noindent Ever since becoming aware of theoretical neuroscience, I've wanted to apply math and CS to modeling mental illness and neurodivergency. There is so much we do not know about the nature of these things, much less about how to *cure* them (if there is such a thing).\\
+
+\noindent This was especially spurred on by the one-parameter proposed model for autism that was presented in class. I really loved how transparent, simple to explain, and powerful the idea was. I wanted to emulate that, since I really like things that I'm able to communicate to others effectively. Especially things that I can understand the output of (this has been a big problem when working with real neural data in the past; I feel like I'm staring at a bunch of peri-stimulus time histograms without knowing what's actually happening). 
+\\
+
+\noindent \textbf{How this relates to what we learned in class}\\
+This heavily relates to a lot of what we learned! We spent over half of the semester focusing on leaky integrators. That's the entire basis on which my project is built. It also utilizes self-inhibition, which was a strong focus in the lab portion. 
+
+\newpage
+\subsection*{Figures}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{parametersweep.png}
+  \end{center}
+  \caption{ Parameter sweep showing the blunting effect of increased $k_T$, roughly showing exponential decay in population activity}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{psth.png}
+  \end{center}
+  \caption Healthy, low tonic gain (black) and dysthymic, high tonic gain (red) regimes and their relative average activity post-reward across the RPE layer. 
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{learnedweights.png}
+  \end{center}
+  \caption{$E(t) = w \cdot \text{cue}(t)$ showing updated weights for $w$. Over time, $w$ learns the probability of reward.}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.55\textwidth]{task.png}
+  \end{center}
+  \caption{ Figure showing the basic Pavlovian task, cue structure plugged into the model}
+  \end{figure}
+
+
+
+
+
 % -------------------------------
 % MAIN FIGURE (scaled up)
 % -------------------------------
-
-
-
+  \begin{centering}
+  \subsection*{The Model}
+\end{centering}
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
@@ -110,7 +162,7 @@
 % -------------------------------
 % EQUATIONS + TEXT
 % -------------------------------
-\newpage
+
 \begin{gather}
 \frac{dV_{i}}{dt}
 = I_{i}(t) - \left(k_{0} + k_{T} T(t)\right)V_{i}(t)
@@ -152,5 +204,24 @@ randn(numUnits,1)   % N(u,1)
 Essentially, when tonic dopamine $T(t)$ is low, phasic bursts from each RPE unit can
 persist. When tonic dopamine is high, the leak term $(k_{0} + k_{T} T(t))$ increases and
 sustained phasic RPE activity is suppressed.
+
+
+
+\begin{thebibliography}{}
+
+\bibitem{Grace2000}
+Grace, A.~A. (2000).
+The tonic/phasic model of dopamine system regulation and its implications for understanding alcohol and psychostimulant craving.
+\textit{Addiction, 95}(Suppl.~2), S119--S128.
+https://doi.org/10.1080/09652140050111690
+
+\bibitem{Gershman2024}
+Gershman, S.~J., Assad, J.~A., Datta, S.~R., Linderman, S.~W., Sabatini, B.~L., Uchida, N., \& Wilbrecht, L. (2024).
+Explaining dopamine through prediction errors and beyond.
+\textit{Nature Neuroscience, 27}(9), 1645--1655.
+https://doi.org/10.1038/s41593-024-01705-4
+
+\end{thebibliography}
+
 
 \end{document}

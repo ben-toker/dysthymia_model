@@ -29,14 +29,13 @@ function [V_history, w_history, E_history, T_history] = RPE_layer(time, cue, rew
     w = zeros(numUnits, 1); %weight in expectation update 
     T = 0; % tonic integrator starts at 0
     
-    % Pre-allocate history matrices
     V_history = zeros(numUnits, numSteps);
     w_history = zeros(numUnits, numSteps);
     E_history = zeros(numUnits, numSteps);
     T_history = zeros(1, numSteps);
     
     for i = 1:numSteps
-        % First, we get cue and reward stimuli
+        % first, we get cue and reward stimuli
         C_t = cue(:, i);      
         O_t = reward(:, i);
         
@@ -46,7 +45,7 @@ function [V_history, w_history, E_history, T_history] = RPE_layer(time, cue, rew
         % I_i(t) = O(t) - E_i(t)
         I_t = O_t - E_t;
         
-        % Update tonic integrator 
+        % update tonic integrator 
         I_T = sum(V); % (sum over all RPE units)
         dTdt = (-T + I_T) / tau_T;
         T = T + dTdt * dt;

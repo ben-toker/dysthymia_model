@@ -1,5 +1,3 @@
-
-
 function [time,cue,reward] = task_generate(nTrials,rewardProb,rewardMag, cueRewardDelay, ITI,dt)
     % Generate a time course of cue and reward through simple Pavlovian task simulation
     % 
@@ -41,7 +39,7 @@ function [time,cue,reward] = task_generate(nTrials,rewardProb,rewardMag, cueRewa
            cue(cueStartIdx : cueStartIdx + stimSteps) = 1;
        end
        
-       % Set Reward (Probabilistic)
+       % set probabilistic reward
        if rand < rewardProb 
            if (rewStartIdx + stimSteps) <= length(t)
                 % You can make reward a pulse (short) or boxcar (long)

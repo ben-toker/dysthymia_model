@@ -71,7 +71,6 @@ title('Phasic Burst Suppression (Steady State)');
 ylabel('Firing Rate (Hz)'); xlabel('Time from Reward (s)');
 grid on;
 
-% Stats
 peak_H = max(mean_trace_H);
 peak_D = max(mean_trace_D);
 pct_change = (1 - peak_D/peak_H) * 100;
