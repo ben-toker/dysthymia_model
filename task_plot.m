@@ -1,6 +1,3 @@
-% taskplot.m
-clear; clc; close all;
-
 dt = 0.001;             % 1ms time step
 nTrials = 5;            % Number of trials to plot
 rewardProb = 0.5;       % 60% chance of reward (to see omissions)
