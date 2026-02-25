@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1765520547 "diagram.tex" "diagram.pdf" "diagram" 1765520548 0
+["pdflatex"] 1765521021 "diagram.tex" "diagram.pdf" "diagram" 1765521023 0
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -135,7 +135,7 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1694638364 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1694638313 7883456 aa57d02d62b9413b74b2fad687d0afcf ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "diagram.aux" 1765520548 807 1f89241baad6a665c85247940d6cbdf1 "pdflatex"
+  "diagram.aux" 1765521023 807 1f89241baad6a665c85247940d6cbdf1 "pdflatex"
   "diagram.tex" 1765520546 10271 b2bc65cd4e570793bb32750a37ba89ed ""
   "learnedweights.png" 1765517187 27887 d24b088ce224f07bf0e4443d34078fb5 ""
   "parametersweep.png" 1765517035 39960 1ab7cdaeb6211ee4b7cee5afad50b8ed ""

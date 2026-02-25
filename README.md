@@ -3,3 +3,121 @@
 In order to run the main model simulation, simply open up the folder in MATLAB and run `main.m`
 
 To get the peri-stimulus-time-histogram plot, run `psth.m.` For the task simulation plot, run `task_plot.m`
+
+$$
+% -------------------------------
+% MAIN FIGURE (scaled up)
+% -------------------------------
+  \begin{centering}
+  \subsection*{The Model}
+\end{centering}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: 
+\path (0,782); %set diagram left start at 0, and has height of 782
+
+%Straight Lines [id:da7729311560611536] 
+\draw    (128.5,59) -- (128.02,109) ;
+\draw [shift={(128,111)}, rotate = 270.55] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da14213375089664504] 
+\draw    (539,66) -- (384.78,275.58) ;
+\draw [shift={(383,278)}, rotate = 306.35] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+%Straight Lines [id:da931828036999205] 
+\draw    (140,152) -- (255,275) ;
+\draw [shift={(255,275)}, rotate = 46.93] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+%Shape: Ellipse [id:dp7518187331440515] 
+\draw   (250,308.83) .. controls (250,269.71) and (281.12,238) .. (319.5,238) .. controls (357.88,238) and (389,269.71) .. (389,308.83) .. controls (389,347.95) and (357.88,379.66) .. (319.5,379.66) .. controls (281.12,379.66) and (250,347.95) .. (250,308.83) -- cycle ;
+%Straight Lines [id:da8535439420642715] 
+\draw    (319.5,379.66) -- (320.97,482.03) ;
+\draw [shift={(321,484.03)}, rotate = 269.18] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Shape: Ellipse [id:dp626488023409523] 
+\draw   (250.5,555.86) .. controls (250.5,516.74) and (281.62,485.03) .. (320,485.03) .. controls (358.38,485.03) and (389.5,516.74) .. (389.5,555.86) .. controls (389.5,594.98) and (358.38,626.69) .. (320,626.69) .. controls (281.62,626.69) and (250.5,594.98) .. (250.5,555.86) -- cycle ;
+%Curve Lines [id:da9543133356360811] 
+\draw    (383,339) .. controls (455,356) and (406,448) .. (354,374) ;
+\draw [shift={(354,374)}, rotate = 234.9] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+%Curve Lines [id:da580510371156114] 
+\draw    (386,585) .. controls (431.77,589.98) and (493.38,460.31) .. (416.17,393.99) ;
+\draw [shift={(415,393)}, rotate = 39.88] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Shape: Rectangle [id:dp922572112320016] 
+\draw   (64,112) -- (213,112) -- (213,152) -- (64,152) -- cycle ;
+
+% Text Node
+\draw (68,120) node [anchor=north west][inner sep=0.75pt]    {$E( t) \ =\ w( t) \ \cdot \text{cue}( t)$};
+% Text Node
+\draw    (478,35) -- (602,35) -- (602,60) -- (478,60) -- cycle  ;
+\draw (479,36) node [anchor=north west][inner sep=0.75pt]   [align=left] {Task reward $\displaystyle O( t)$};
+% Text Node
+\draw    (60,32) -- (211,32) -- (211,57) -- (60,57) -- cycle  ;
+\draw (61,33) node [anchor=north west][inner sep=0.75pt]   [align=left] {Cue for reward $\displaystyle cue( t)$};
+% Text Node
+\draw (260.24,530.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{79.79pt}\setlength\topsep{0pt}
+\begin{center}
+{\fontfamily{pcr}\selectfont {\small Tonic Integrator}}
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (304,561.03) node [anchor=north west][inner sep=0.75pt]    {$T( t)$};
+% Text Node
+\draw (277,284.03) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{56.33pt}\setlength\topsep{0pt}
+\begin{center}
+{\fontfamily{pcr}\selectfont RPE}\\{\fontfamily{pcr}\selectfont Unit Layer}
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (92,67) node [anchor=north west][inner sep=0.75pt]    {$w( t)$};
+% Text Node
+\draw (419,350) node [anchor=north west][inner sep=0.75pt]   [align=left] {← autoreceptor };
+% Text Node
+\draw (454,478) node [anchor=north west][inner sep=0.75pt]    {$k_{T} \ \text{drives inhibition gain}$};
+
+
+\end{tikzpicture}
+% -------------------------------
+% EQUATIONS + TEXT
+% -------------------------------
+
+\begin{gather}
+\frac{dV_{i}}{dt}
+= I_{i}(t) - \left(k_{0} + k_{T} T(t)\right)V_{i}(t)
++ \left(\sigma \cdot \sqrt{dt} \cdot \mathcal{N}(u,1)\right)
+\\[4pt]
+I_{i}(t) = O_{i}(t) - E_{i}(t)
+\\[4pt]
+E_{i}(t) = w(t) \cdot \text{cue}(t)
+\\[4pt]
+\dfrac{dw}{dt} = \eta \cdot V_i(t) \cdot \text{cue}(t)
+\\[4pt]
+\dfrac{dT}{dt} = \dfrac{-T(t) + I_T(t)}{\tau_T}
+\\[4pt]
+I_T(t) = \sum_{\forall i} V_i
+\end{gather}
+
+\noindent RPE Update Rule Key
+\begin{itemize}
+  \item$V_{i}(t)$ Membrane variable of RPE neuron $i$; $I_{i}(t)$ is its corresponding input.
+  \item $w(t)$ is the weighted sum of active cues. 
+  \item $\eta$ is the learning rate of the RPE weight update.
+  \item $T(t)$ Integrator of the RPE unit layer, intended to represent tonic dopamine.
+  \item $k_{0}$ Baseline leak constant.
+  \item$k_{T}$ Tonic feedback gain that determines how strongly tonic dopamine modulates self-inhibition.
+  \item $\sigma$  Noise amplitude.
+  \item $\mathcal{N}(u,1)$ Additive Gaussian noise over $u$ units.
+    In MATLAB, this would be
+
+
+\begin{lstlisting}
+numUnits = u
+randn(numUnits,1)   % N(u,1)
+\end{lstlisting}
+
+
+\end{itemize}
+
+
+Essentially, when tonic dopamine $T(t)$ is low, phasic bursts from each RPE unit can
+persist. When tonic dopamine is high, the leak term $(k_{0} + k_{T} T(t))$ increases and
+sustained phasic RPE activity is suppressed.
+$$
